@@ -18,4 +18,4 @@ if [ ! -d 'pack/minpac/opt/minpac' ]; then
   git clone https://github.com/k-takata/minpac.git pack/minpac/opt/minpac/
 fi
 
-$cmd -c MinpacUpdate
+$cmd -c PackUpdate
