@@ -11,5 +11,5 @@ endif
 if !exists('g:colors_name') || g:colors_name != g:base16_theme
   let base16colorspace=256
 
-  execute 'colorscheme ' . g:base16_theme
+  silent! execute 'colorscheme ' . g:base16_theme
 endif
