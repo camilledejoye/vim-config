@@ -8,7 +8,7 @@ set number
 set laststatus=2
 set modelines=5
 set vb t_vb=
-set ts=2 sts=2 sw=2 expandtab
+set ts=4 sts=4 sw=4 expandtab
 set listchars=tab:▶\ ,eol:¬
 set incsearch
 set nojoinspaces
@@ -62,7 +62,7 @@ if exists('*minpac#init')
   call minpac#add('airblade/vim-gitgutter')
   call minpac#add('etdev/vim-hexcolor')
   call minpac#add('tobyS/vmustache', {'type': 'opt'})
-  call minpac#add('evidens/vim-twig')
+  call minpac#add('lumiliet/vim-twig')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
