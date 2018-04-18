@@ -4,7 +4,4 @@ let g:syntastic_check_on_open            = 1
 let g:syntastic_check_on_wq              = 0
 let g:syntastic_auto_jump                = 1
 
-let g:syntastic_php_phpcs_quiet_messages = {
-    \ "level": "warnings",
-    \ "type": "style"
-\ }
+let g:syntastic_quiet_messages = { "type": "style" }
