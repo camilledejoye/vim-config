@@ -8,4 +8,4 @@ if !exists(":DiffOrig")
 endif
 
 " Delete all trailling spaces on write
-autocmd BufWritePre * %s/\s\+$//e
+" autocmd BufWritePre * %s/\s\+$//e
