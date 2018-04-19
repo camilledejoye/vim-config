@@ -2,6 +2,13 @@
 " Defaults to 4s
 set updatetime=250
 
+" Uses the leader to not conflict with the deplacement mappings
+" [Push|Stage|Undo] Hunk
+nmap <Leader>ph <Plug>GitGutterPreviewHunk
+nmap <Leader>sh <Plug>GitGutterStageHunk
+nmap <Leader>uh <Plug>GitGutterUndoHunk
+
+" Go to [Previous|Next] Hunk
 nmap gph <Plug>GitGutterPrevHunk
 nmap gnh <Plug>GitGutterNextHunk
 
