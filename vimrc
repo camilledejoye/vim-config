@@ -16,6 +16,7 @@ set display+=lastline
 set autochdir
 set splitright
 set termguicolors
+set scrolloff=3
 
 if has('nvim')
   set inccommand=nosplit
@@ -64,6 +65,7 @@ if exists('*minpac#init')
   call minpac#add('tobyS/vmustache')
   call minpac#add('elythyr/vim-twig')
   call minpac#add('wikitopian/hardmode')
+  call minpac#add('kana/vim-vspec', {'type': 'opt'})
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
