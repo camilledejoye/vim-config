@@ -8,8 +8,4 @@ nmap <Leader>ph <Plug>GitGutterPreviewHunk
 nmap <Leader>sh <Plug>GitGutterStageHunk
 nmap <Leader>uh <Plug>GitGutterUndoHunk
 
-" Go to [Previous|Next] Hunk
-nmap gph <Plug>GitGutterPrevHunk
-nmap gnh <Plug>GitGutterNextHunk
-
 let g:gitgutter_diff_args = '-w'
