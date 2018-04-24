@@ -1,27 +1,38 @@
+" Global {{{
 let mapleader = ','
 
 filetype plugin indent on
 syntax on
 
-set mouse=a
+" Try to user Vim 'funzy' finder
+set path+=**
+set noautochdir
+
+" set mouse=a " Try to force myself to not use the mouse
+set hidden
 set number
 set laststatus=2
 set modelines=5
-set vb t_vb=
 set ts=4 sts=4 sw=4 expandtab
 set listchars=tab:▶\ ,eol:¬
 set incsearch
 set nojoinspaces
 set display+=lastline
-set autochdir
+" set autochdir
 set splitright
-set termguicolors
 set scrolloff=3
+
+if has('termguicolors')
+  set termguicolors
+endif
 
 if has('nvim')
   set inccommand=nosplit
 endif
+" }}}
 
+" Packages {{{
+" Minpack {{{
 if exists('*minpac#init')
   call minpac#init()
 
@@ -70,8 +81,23 @@ endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+" }}}
+
+" Load optional plugins based on filetype {{{
+augroup LoadPlugins
+  autocmd!
+  " autocmd FileType php packadd! 'phpunit.vim'
+augroup END
+" }}}
+" }}}
 
 " Autoload all config files
 for s:config_file in split(glob('~/.vim/config/*.vim'), "\n")
     execute 'source ' s:config_file
 endfor
+
+" Abbreviations {{{
+cnoreabbrev vfind vertical sfind
+" }}}
+
+" vim: ts=2 sw=2 et fdm=marker
