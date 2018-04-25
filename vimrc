@@ -14,7 +14,7 @@ set number
 set laststatus=2
 set modelines=5
 set ts=4 sts=4 sw=4 expandtab
-set listchars=tab:▶\ ,eol:¬
+set listchars=tab:»\ ,eol:¬
 set incsearch
 set nojoinspaces
 set display+=lastline
