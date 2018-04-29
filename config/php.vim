@@ -1,21 +1,24 @@
+" Mappings {{{
+" Start completion after typing -> or ::
+inoremap <expr> -> !empty(&omnifunc) ? '-><C-x><C-o>' : '-><C-p>'
+inoremap <expr> :: !empty($omnifunc) ? '::<C-x><C-o>' : '::<C-p>'
+" }}}
+
+" php.vim configurations {{{
 let g:php_html_in_strings = 1
 let g:sql_type_default    = 'sqloracle' " SQL syntax colorscheme
-let g:php_folding         = 1 " Enable folding PHP blocks
-let g:php_phpdoc_folding  = 1 " Enable folding PHP comments
 
-function! PhpSyntaxOverride()
-  redraw!
-    hi! def link phpDocTags       phpConstants
-    hi! def link phpDocParam      phpType
-    hi! def link phpDocIdentifier phpIdentifier
-endfunction
+function! s:PhpSyntaxOverride() " {{{
+  hi! def link phpDocTags       phpConstants
+  hi! def link phpDocParam      phpType
+  hi! def link phpDocIdentifier phpIdentifier
+endfunction " }}}
+" }}}
 
-augroup phpSyntaxOverride
-    autocmd!
-    autocmd FileType php call PhpSyntaxOverride()
-augroup END
-
-augroup phpTagsFile
+augroup MyPhpConfiguration
   autocmd!
+  autocmd FileType php call <Sid>PhpSyntaxOverride()
   autocmd FileType php set tags^=./.php.tags;
 augroup END
+
+" vim: et ts=2 sw=2 fdm=marker
