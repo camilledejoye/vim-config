@@ -11,6 +11,7 @@ set noautochdir
 " set mouse=a " Try to force myself to not use the mouse
 set hidden
 set number
+set relativenumber
 set laststatus=2
 set modelines=5
 set ts=4 sts=4 sw=4 expandtab
@@ -21,6 +22,7 @@ set display+=lastline
 " set autochdir
 set splitright
 set scrolloff=3
+set diffopt+=vertical
 
 if has('termguicolors')
   set termguicolors
@@ -81,13 +83,6 @@ endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
-" }}}
-
-" Load optional plugins based on filetype {{{
-augroup LoadPlugins
-  autocmd!
-  " autocmd FileType php packadd! 'phpunit.vim'
-augroup END
 " }}}
 " }}}
 
