@@ -14,8 +14,8 @@ if exists(':Tabularize')
     vmap <silent> <Leader>t, :Tabularize /,\zs/l0l1<CR>
 
     " For JSON syntax
-    nmap <silent> <Leader>t: :Tabularize /:\zs/l0l1<CR>
-    vmap <silent> <Leader>t: :Tabularize /:\zs/l0l1<CR>
+    nmap <silent> <Leader>t: :Tabularize /^[^:]*:\zs/l0l1<CR>
+    vmap <silent> <Leader>t: :Tabularize /^[^:]*:\zs/l0l1<CR>
 
     " For variables, ex.: multiple lines function definition
     nmap <silent> <Leader>t$ :Tabularize /\$/l1c0<CR>
