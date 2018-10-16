@@ -11,7 +11,7 @@ map ,, :%s///gn<CR>
 " Command mapping (:bq) to close the current buffer and go back to the
 " previous one
 " cmap bq :bp <BAR> :bd #
-cnoreabbrev bq bp <BAR> bd #
+cnoreabbrev bq bp <BAR> bd #<CR>
 
 " Search for selected text, forwards or backwards.
 " http://vim.wikia.com/wiki/Search_for_visually_selected_text

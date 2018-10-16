@@ -1,7 +1,8 @@
 " Mappings {{{
 " Start completion after typing -> or ::
-inoremap <expr> -> !empty(&omnifunc) ? '-><C-x><C-o>' : '-><C-p>'
-inoremap <expr> :: !empty($omnifunc) ? '::<C-x><C-o>' : '::<C-p>'
+" Disable the time to test NCM2 and Phpactor
+" inoremap <expr> -> !empty(&omnifunc) ? '-><C-x><C-o>' : '-><C-p>'
+" inoremap <expr> :: !empty($omnifunc) ? '::<C-x><C-o>' : '::<C-p>'
 " }}}
 
 " php.vim configurations {{{

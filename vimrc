@@ -19,7 +19,6 @@ set listchars=tab:»\ ,eol:¬
 set incsearch
 set nojoinspaces
 set display+=lastline
-" set autochdir
 set splitright
 set scrolloff=3
 set diffopt+=vertical
@@ -35,53 +34,103 @@ endif
 
 " Packages {{{
 " Minpack {{{
+
+" Needed to autoload packages depending on filetype
+packadd minpac
+
 if exists('*minpac#init')
   call minpac#init()
 
-  call minpac#add('k-takata/minpac', {'type': 'opt'})
+  " call minpac#add('k-takata/minpac', {'type': 'opt'})
+  call minpac#add('elythyr/minpac', {'type': 'opt'})
+
+  call minpac#add('chriskempson/base16-vim')
+
+  call minpac#add('wikitopian/hardmode')
+
+  call minpac#add('vim-airline/vim-airline')
+  call minpac#add('vim-airline/vim-airline-themes')
+
   call minpac#add('tpope/vim-surround')
   call minpac#add('tpope/vim-commentary')
+  "call minpac#add('scrooloose/nerdcommenter')
   call minpac#add('tpope/vim-scriptease')
   call minpac#add('tpope/vim-unimpaired')
   call minpac#add('tpope/vim-endwise')
   call minpac#add('tpope/vim-speeddating')
-  call minpac#add('tpope/vim-repeat')
-  call minpac#add('vim-scripts/AnsiEsc.vim')
-  call minpac#add('skywind3000/asyncrun.vim')
-  call minpac#add('chriskempson/base16-vim')
-  call minpac#add('kien/ctrlp.vim')
-  "call minpac#add('scrooloose/nerdcommenter')
-  call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
-  call minpac#add('Xuyuanp/nerdtree-git-plugin', {'type': 'opt'})
-  call minpac#add('git@github.com:elythyr/pdv.git', {'branch': 'improvements'})
-  " call minpac#add('git@github.com:elythyr/php.vim.git', {'branch': 'phpdoc-folding'})
-  call minpac#add('git@github.com:elythyr/phpcd.vim.git', {'type': 'opt'})
-  call minpac#add('git@github.com:elythyr/phpunit.vim.git')
-  call minpac#add('git@github.com:elythyr/vim-php-refactoring-toolbox.git', {'branch': 'improvements'})
-  call minpac#add('git@github.com:elythyr/vim-snippets.git', {'branch': 'perso'})
-  call minpac#add('git@github.com:elythyr/vim-sync.git', {'branch': 'improvements'})
-  call minpac#add('git@github.com:elythyr/vim-cleanfold.git')
-  call minpac#add('git@github.com:elythyr/php-foldexpr.vim.git')
-  call minpac#add('StanAngeloff/php.vim')
-  call minpac#add('shawncplus/phpcomplete.vim')
-  call minpac#add('ervandew/supertab')
-  call minpac#add('vim-syntastic/syntastic')
-  call minpac#add('godlygeek/tabular')
-  call minpac#add('majutsushi/tagbar', {'type': 'opt'})
-  call minpac#add('vim-php/tagbar-phpctags.vim', {'type': 'opt'})
-  call minpac#add('SirVer/ultisnips')
   call minpac#add('tpope/vim-abolish')
   call minpac#add('tpope/vim-fugitive')
-  call minpac#add('vim-airline/vim-airline')
-  call minpac#add('vim-airline/vim-airline-themes')
-  call minpac#add('xolox/vim-easytags')
-  call minpac#add('xolox/vim-misc')
+  call minpac#add('tpope/vim-repeat')
+
+  call minpac#add('kien/ctrlp.vim')
+
+  call minpac#add('skywind3000/asyncrun.vim')
+
+  " call minpac#add('ervandew/supertab')
+  call minpac#add('vim-syntastic/syntastic')
+
+  call minpac#add('godlygeek/tabular')
+
+  call minpac#add('StanAngeloff/php.vim')
+  " call minpac#add('shawncplus/phpcomplete.vim')
+  call minpac#add('phpactor/phpactor', {'do': '!composer install'})
+  call minpac#add('ncm2/ncm2')
+    call minpac#add('roxma/nvim-yarp')
+  call minpac#add('ncm2/ncm2-path')
+  " call minpac#add('ncm2/ncm2-tmux')
+  " call minpac#add('wellle/tmux-complete')
+  call minpac#add('ncm2/ncm2-cssomni')
+  call minpac#add('ncm2/ncm2-ultisnips') " Experimental
+  call minpac#add('ncm2/ncm2-snipmate')
+  call minpac#add('ncm2/ncm2-html-subscope')
+  call minpac#add('phpactor/ncm2-phpactor')
+
+  call minpac#add('garbas/vim-snipmate')
+    call minpac#add('tomtom/tlib_vim')
+    call minpac#add('marcweber/vim-addon-mw-utils')
+
+  call minpac#add('lvht/phpcd.vim', {'type': 'opt', 'do': '!composer install'})
+  " augroup loadphpcd
+  "     autocmd!
+  "     autocmd FileType php packadd phpcd.vim
+  " augroup END
+
+  " call minpac#add('majutsushi/tagbar', {'type': 'opt'})
+  " call minpac#add('vim-php/tagbar-phpctags.vim', {'type': 'opt'})
+
+  call minpac#add('SirVer/ultisnips')
+  call minpac#add('honza/vim-snippets')
+  call minpac#add('git@github.com:elythyr/pdv.git', {'branch': 'improvements'})
+    call minpac#add('tobyS/vmustache')
+
+  call minpac#add('sniphpets/sniphpets-common')
+  call minpac#add('sniphpets/sniphpets-symfony')
+  call minpac#add('sniphpets/sniphpets-phpunit')
+  call minpac#add('sniphpets/sniphpets-doctrine')
+  call minpac#add('sniphpets/sniphpets-postfix-codes')
+    call minpac#add('sniphpets/sniphpets')
+
+  " call minpac#add('xolox/vim-easytags')
+  " call minpac#add('xolox/vim-misc')
+
   call minpac#add('airblade/vim-gitgutter')
+
   call minpac#add('etdev/vim-hexcolor')
-  call minpac#add('tobyS/vmustache')
-  call minpac#add('elythyr/vim-twig')
-  call minpac#add('wikitopian/hardmode')
-  call minpac#add('kana/vim-vspec', {'type': 'opt'})
+
+  " call minpac#add('kana/vim-vspec', {'type': 'opt'})
+
+  call minpac#add('scrooloose/nerdtree')
+  call minpac#add('Xuyuanp/nerdtree-git-plugin')
+  " call minpac#add('git@github.com:elythyr/php.vim.git', {'branch': 'phpdoc-folding'})
+  " call minpac#add('git@github.com:elythyr/phpcd.vim.git', {'type': 'opt'})
+  " call minpac#add('git@github.com:elythyr/phpunit.vim.git')
+  " call minpac#add('vim-scripts/AnsiEsc.vim')
+  " call minpac#add('git@github.com:elythyr/vim-php-refactoring-toolbox.git', {'branch': 'improvements'})
+  " call minpac#add('git@github.com:elythyr/vim-snippets.git', {'branch': 'perso'})
+  " call minpac#add('git@github.com:elythyr/vim-sync.git', {'branch': 'improvements'})
+  " call minpac#add('elythyr/vim-twig')
+  call minpac#add('git@github.com:elythyr/vim-cleanfold.git')
+  call minpac#add('git@github.com:elythyr/php-foldexpr.vim.git')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
@@ -95,7 +144,12 @@ for s:config_file in split(glob('~/.vim/config/*.vim'), "\n")
 endfor
 
 " Abbreviations {{{
-cnoreabbrev vfind vertical sfind
+cnoreabbrev f   find
+cnoreabbrev sf  sfind
+cnoreabbrev vsf vertical sfind
+cnoreabbrev tf  tabfind
+
+cnoreabbrev te  tabedit
 " }}}
 
 " vim: ts=2 sw=2 et fdm=marker
