@@ -1,17 +1,13 @@
 " To toggle from paste mode to non-paste mode
 set pastetoggle=<F12>
 
+" Search {{{1
 " To count the number of times the word under the cursor is present in the
 " document
 map ,* *<C-O>:%s///gn<CR>
 
 " To count the number of results for the last search
 map ,, :%s///gn<CR>
-
-" Command mapping (:bq) to close the current buffer and go back to the
-" previous one
-" cmap bq :bp <BAR> :bd #
-cnoreabbrev bq bp <BAR> bd #<CR>
 
 " Search for selected text, forwards or backwards.
 " http://vim.wikia.com/wiki/Search_for_visually_selected_text
@@ -27,3 +23,17 @@ vnoremap <silent> # :<C-U>
   \substitute(escape(@", '/\.*$^~['), '\v^\_s*(.{-})\_s*$', '\1', ''),
   \'\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+" 1}}}
+
+" Buffers {{{1
+" Command mapping (:bq) to close the current buffer and go back to the
+" previous one
+" cmap bq :bp <BAR> :bd #
+cnoreabbrev bq bp <BAR> bd #<CR>
+" 1}}}
+
+" Open all folds and close one level
+" Usefull to open everything but documentation block
+nmap zT zR<BAR>zm<CR>
+
+" vim: ts=2 sw=2 et fdm=marker
