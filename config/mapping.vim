@@ -32,8 +32,17 @@ vnoremap <silent> # :<C-U>
 cnoreabbrev bq bp <BAR> bd #<CR>
 " 1}}}
 
+" Folds {{{1
 " Open all folds and close one level
 " Usefull to open everything but documentation block
-nmap zT zR<BAR>zm<CR>
+if empty(maparg('zT', 'n'))
+  nmap <silent> zT zR<BAR>zm<CR>
+endif
+
+" Reset foldlevel to 1
+if empty(maparg('zI', 'n'))
+  nmap <silent> zI :let &foldlevel = &foldlevelstart<CR>
+endif
+" 1}}}
 
 " vim: ts=2 sw=2 et fdm=marker
