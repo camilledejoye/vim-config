@@ -131,6 +131,8 @@ if exists('*minpac#init')
   call minpac#add('sniphpets/sniphpets-postfix-codes')
     call minpac#add('sniphpets/sniphpets')
 
+  call minpac#add('janko-m/vim-test')
+
   " call minpac#add('xolox/vim-easytags')
   " call minpac#add('xolox/vim-misc')
 
