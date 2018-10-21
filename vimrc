@@ -44,13 +44,10 @@ endif
 " Minpack {{{
 
 " Needed to autoload packages depending on filetype
-packadd minpac
-
 if exists('*minpac#init')
   call minpac#init()
 
-  " call minpac#add('k-takata/minpac', {'type': 'opt'})
-  call minpac#add('elythyr/minpac', {'type': 'opt'})
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
 
   call minpac#add('chriskempson/base16-vim')
 
