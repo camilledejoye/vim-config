@@ -1,0 +1,43 @@
+priority 1
+
+global !p
+import sniphpets
+endglobal
+
+snippet putest "PHPUnit / Test method" b
+/**
+ * @test
+ */
+public function that${1}()
+{
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet putestdepends "PHPUnit / Test method with dependency" b
+/**
+ * @test
+ * @depends ${1}
+ */
+public function that${2}(${3})
+{
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet putestprovider "PHPUnit / Test method with data provider" b
+/**
+ * @test
+ * @dataProvider ${1}
+ */
+public function that${2}(${3})
+{
+	${VISUAL}${0}
+}
+
+public function $1()
+{
+	return [
+	];
+}
+endsnippet
