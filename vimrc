@@ -73,6 +73,8 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-projectionist')
   call minpac#add('tpope/vim-eunuch')
 
+  call minpac#add('w0rp/ale')
+
   call minpac#add('kien/ctrlp.vim')
 
   call minpac#add('skywind3000/asyncrun.vim')
