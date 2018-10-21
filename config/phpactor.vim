@@ -1,37 +1,46 @@
-" " Use Phpactor for omni-completion
+" Use Phpactor for omni-completion
+" Disabled  because it doesn't provide build in completion
+" Example of \LogicException
+" Need to see why... kind of stupid !
 " autocmd FileType php setlocal omnifunc=phpactor#Complete
 
 " let g:phpactorOmniError = v:true " Enable useful error messages when completion is invoked
 
-" TODO: add a test for ncm2 existence or put it to after/
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
+" The function isn't provided by default
+" I guess they want to make sure the action is possible threw the menu
+" I don't care, I accept errors as long as I can be quicker
+if !exists('*phpactor#ExtractConstant')
+  function! phpactor#ExtractConstant()
+      call phpactor#rpc("extract_constant", { "offset": phpactor#_offset(), "source": phpactor#_source(), "path": expand('%:p')})
+  endfunction
+endif
 
-" Include use statement
-nmap ypu :call phpactor#UseAdd()<CR>
+nnoremap yiu :call phpactor#UseAdd()<CR>
 
-" Invoke the context menu
-nmap ,pm :call phpactor#ContextMenu()<CR>
+nnoremap <Leader>pp :call phpactor#ContextMenu()<CR>
 
-" Invoke the navigation menu
-nmap ,ps :call phpactor#Navigate()<CR>
+nnoremap ]pn :call phpactor#Navigate()<CR>
 
 " Goto definition of class or class member under the cursor
-nmap <C-]> :call phpactor#GotoDefinition()<CR>
+" TODO Look for a way to bind it to <C-]> and still get the tag follow up in
+" the vim documentation
+" nnoremap <C-]> :call phpactor#GotoDefinition()<CR>
+nnoremap ]g :call phpactor#GotoDefinition()<CR>
 
-" Transform the classes in the current file
-nmap ypt :call phpactor#Transform()<CR>
+nnoremap cpt :call phpactor#Transform()<CR>
 
-" Generate a new class (replacing the current file)
-" nmap <Leader>cc :call phpactor#ClassNew()<CR>
-" cnoreabbrev class call phpactor#ClassNew()<CR>
 command! Class :call phpactor#ClassNew()
 
-" Extract expression (normal mode)
-nmap ypee :call phpactor#ExtractExpression(v:false)<CR>
+" I wanted to use mappings starting with "y" for the extract operations
+" Because we will add more text, and i generally use "y" in those cases
+" But it creates a delay when I cant to copy a selection to a register
+" So I choose to go for "c" because we're changing the current line
+" I mostly use "s" instead of "c" anyway when I want to replace a selection
+nnoremap cee :call phpactor#ExtractExpression(v:false)<CR>
+vnoremap cee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 
-" Extract expression from selection
-vmap ypee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
+vnoremap cem :<C-U>call phpactor#ExtractMethod()<CR>
 
-" Extract method from selection
-vmap ypem :<C-U>call phpactor#ExtractMethod()<CR>
+nnoremap cec :call phpactor#ExtractConstant()<CR>
+
+" vim: et ts=2 sw=2 fdm=marker

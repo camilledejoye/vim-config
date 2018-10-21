@@ -82,7 +82,7 @@ if exists('*minpac#init')
 
   call minpac#add('StanAngeloff/php.vim')
   " call minpac#add('shawncplus/phpcomplete.vim')
-  call minpac#add('phpactor/phpactor', {'do': '!composer install'})
+  call minpac#add('phpactor/phpactor', {'do': '!composer install --no-dev -o'})
   call minpac#add('ncm2/ncm2')
     call minpac#add('roxma/nvim-yarp')
   call minpac#add('ncm2/ncm2-path')
@@ -90,15 +90,20 @@ if exists('*minpac#init')
   " call minpac#add('wellle/tmux-complete')
   call minpac#add('ncm2/ncm2-cssomni')
   call minpac#add('ncm2/ncm2-ultisnips') " Experimental
-  call minpac#add('ncm2/ncm2-snipmate')
+  " call minpac#add('ncm2/ncm2-snipmate') " Experimental
   call minpac#add('ncm2/ncm2-html-subscope')
   call minpac#add('phpactor/ncm2-phpactor')
+
+  " Don't feel the need for it, but I keep the link in case
+  " https://github.com/2072/PHP-Indenting-for-VIm
+
+  call minpac#add('othree/csscomplete.vim')
 
   call minpac#add('garbas/vim-snipmate')
     call minpac#add('tomtom/tlib_vim')
     call minpac#add('marcweber/vim-addon-mw-utils')
 
-  call minpac#add('lvht/phpcd.vim', {'type': 'opt', 'do': '!composer install'})
+  " call minpac#add('lvht/phpcd.vim', {'type': 'opt', 'do': '!composer install --no-dev -o'})
   " augroup loadphpcd
   "     autocmd!
   "     autocmd FileType php packadd phpcd.vim
