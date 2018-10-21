@@ -45,4 +45,19 @@ if empty(maparg('zI', 'n'))
 endif
 " 1}}}
 
+" Terminal {{{1
+tnoremap <silent> <Esc> <C-\><C-n>
+" 1}}}
+
+" Quick quit insert mode
+" Like the idea, want to gave it a try
+inoremap jf <Esc>
+inoremap fj <Esc>
+
+" <C-^> is a real pain on azerty keaybords...
+nnoremap <C-h> <C-^>
+
+" Quick shell command
+nnoremap ! :!
+
 " vim: ts=2 sw=2 et fdm=marker
