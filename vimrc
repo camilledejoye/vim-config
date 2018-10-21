@@ -85,6 +85,7 @@ if exists('*minpac#init')
   call minpac#add('vim-syntastic/syntastic')
 
   call minpac#add('godlygeek/tabular')
+  call minpac#add('junegunn/vim-easy-align')
 
   call minpac#add('StanAngeloff/php.vim')
   " call minpac#add('shawncplus/phpcomplete.vim')
