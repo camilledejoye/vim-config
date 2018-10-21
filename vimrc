@@ -154,8 +154,6 @@ if exists('*minpac#init')
   " call minpac#add('elythyr/vim-twig')
   call minpac#add('git@github.com:elythyr/vim-cleanfold.git')
   call minpac#add('git@github.com:elythyr/php-foldexpr.vim.git')
-  " Want to gave it a try when I will have the time
-  " call minpac#add('rayburgemeestre/phpfolding.vim')
 
   call minpac#add('lumiliet/vim-twig')
 endif
