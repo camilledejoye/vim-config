@@ -7,11 +7,15 @@ syntax on
 " Try to user Vim 'funzy' finder
 set path+=**
 set noautochdir
+" The goal is to speed up the find mainly, try and check if that doesn't screw
+" something up
+set wildignore+=*/vendor/*,*/node_modules/*,*/var/*,*/web/build/*
 
 " set mouse=a " Try to force myself to not use the mouse
 set hidden
 set number
 set relativenumber
+set cursorline
 set laststatus=2
 set modelines=5
 set ts=4 sts=4 sw=4 expandtab
@@ -22,6 +26,10 @@ set display+=lastline
 set splitright
 set scrolloff=3
 set diffopt+=vertical
+set wildmenu
+
+" To add a personal templates directory to the runtimepath
+execute 'set runtimepath+=' . expand('<sfile>:p:h') . '/templates'
 
 if has('termguicolors')
   set termguicolors
@@ -131,6 +139,8 @@ if exists('*minpac#init')
   " call minpac#add('elythyr/vim-twig')
   call minpac#add('git@github.com:elythyr/vim-cleanfold.git')
   call minpac#add('git@github.com:elythyr/php-foldexpr.vim.git')
+
+  call minpac#add('lumiliet/vim-twig')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
