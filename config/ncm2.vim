@@ -50,4 +50,6 @@ augroup END
 " don't provide any keys to add
 inoremap <silent> <expr> <CR> pumvisible() ? ncm2_ultisnips#expand_or('', 'n') : "\<CR>"
 
+let g:endwise_no_mappings = 0 " Try to make the map use <C-r>= instead...
+
 " vim: et ts=2 sw=2 fdm=marker
