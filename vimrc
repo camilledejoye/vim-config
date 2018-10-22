@@ -1,3 +1,12 @@
+" External configuration {{{
+" Will always add the directory of this file to the runtimepath
+" Allow me to move all the vim-config repository inside my .dotfiles/
+let my_vim_dir = fnamemodify(resolve(expand('<sfile>')), ':p:h')
+execute 'set runtimepath^=' . my_vim_dir
+execute 'set runtimepath^=' . my_vim_dir . '/after'
+let &packpath = &runtimepath
+" }}}
+
 " Global {{{
 let mapleader = ','
 
