@@ -1,9 +1,9 @@
 " External configuration {{{
 " Will always add the directory of this file to the runtimepath
 " Allow me to move all the vim-config repository inside my .dotfiles/
-let my_vim_dir = fnamemodify(resolve(expand('<sfile>')), ':p:h')
-execute 'set runtimepath^=' . my_vim_dir
-execute 'set runtimepath^=' . my_vim_dir . '/after'
+let s:my_vim_dir = fnamemodify(resolve(expand('<sfile>')), ':p:h')
+execute 'set runtimepath^=' . s:my_vim_dir
+execute 'set runtimepath^=' . s:my_vim_dir . '/after'
 let &packpath = &runtimepath
 " }}}
 
@@ -170,7 +170,7 @@ command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 " }}}
 
 " Autoload all config files
-for s:config_file in split(glob('~/.vim/config/*.vim'), "\n")
+for s:config_file in split(glob(s:my_vim_dir . '/config/*.vim'), "\n")
     execute 'source ' s:config_file
 endfor
 
@@ -182,5 +182,7 @@ cnoreabbrev tf  tabfind
 
 cnoreabbrev te  tabedit
 " }}}
+
+unlet s:my_vim_dir
 
 " vim: ts=2 sw=2 et fdm=marker
