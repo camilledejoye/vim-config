@@ -3,7 +3,7 @@
 " Allow me to move all the vim-config repository inside my .dotfiles/
 let s:my_vim_dir = fnamemodify(resolve(expand('<sfile>')), ':p:h')
 execute 'set runtimepath^=' . s:my_vim_dir
-execute 'set runtimepath^=' . s:my_vim_dir . '/after'
+execute 'set runtimepath+=' . s:my_vim_dir . '/after'
 let &packpath = &runtimepath
 " }}}
 
@@ -56,7 +56,7 @@ endif
 if exists('*minpac#init')
   call minpac#init()
 
-  call minpac#add('k-takata/minpac', {'type': 'opt'})
+  call minpac#add('k-takata/minpac', {'type': 'opt', 'branch': 'master'})
 
   call minpac#add('chriskempson/base16-vim')
 
