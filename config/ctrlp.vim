@@ -9,4 +9,8 @@ let g:ctrlp_map = '<C-F>' " To open CtrlP in 'File' (standard) mode without conf
 " Change the root of CtrlP when editing something in my Vim directory
 " Example: When I edit a plugin, I may want to be able to use CtrlP to find a
 " config or another plugin, etc.
-autocmd BufRead,BufWrite ~/.vim/* let b:ctrlp_root_markers = ['vimrc']
+augroup ely_ctrlp
+  autocmd!
+  " autocmd BufRead,BufWrite ~/.vim/* let b:ctrlp_root_markers = ['vimrc']
+  execute 'autocmd BufRead,BufWrite ' . fnamemodify(resolve(expand('%')), ':p:h:h') . '/* let b:ctrlp_root_markers = ["vimrc"]'
+augroup END
