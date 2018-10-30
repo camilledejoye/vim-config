@@ -38,7 +38,7 @@ set diffopt+=vertical
 set wildmenu
 
 " To add a personal templates directory to the runtimepath
-execute 'set runtimepath+=' . expand('<sfile>:p:h') . '/templates'
+execute 'set runtimepath+=' . s:my_vim_dir . '/templates'
 
 if has('termguicolors')
   set termguicolors
