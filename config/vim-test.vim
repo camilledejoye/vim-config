@@ -8,9 +8,9 @@ nnoremap <silent> <Leader>tl :TestLast<CR>
 nnoremap <silent> <Leader>tv :TestVisit<CR>
 
 function! s:DefineStrategy() " {{{1
-  if exists('*vimux#a_function')
+  if exists('*VimuxRunCommand')
     return 'vimux'
-  elseif exists('*vim-tmux-runner#a_function')
+  elseif 2 == exists(':VtrSendCommandToRunner')
     return 'vtr'
   elseif has('nvim')
     return 'neovim'
