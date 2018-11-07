@@ -1,12 +1,7 @@
 " Global PHP filetype configurations
 
-function! s:TextObject(inner) abort " {{{
-  keepjumps normal! [[
-endfunction " }}}
-
+" foldlevelstart doesn't work for ftplugin
 setlocal foldlevel=1 " To automaticaly open classes folds
-
-nnoremap <silent> zI :set foldlevel=1<CR>
 
 " Open the phpdoc for the word under the cursor
 nnoremap <silent> <Leader>pk :silent execute ':!xdg-open ' .
