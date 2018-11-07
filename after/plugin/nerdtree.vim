@@ -1,3 +1,4 @@
 if exists(':NERDTree')
-    map <F2> :NERDTreeToggle<CR>
+    nnoremap <F2> :NERDTreeToggle<CR>
+    nnoremap <F3> :NERDTreeFind<CR>
 endif
