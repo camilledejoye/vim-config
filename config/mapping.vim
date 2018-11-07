@@ -47,12 +47,16 @@ set pastetoggle=<F12>
   " Open all folds and close one level
   " Usefull to open everything but documentation block
   if empty(maparg('zT', 'n'))
-    nmap <silent> zT zR<BAR>zm<CR>
+    nnoremap <silent> zT zR<BAR>zm<CR>
   endif
 
   " Reset foldlevel to 1
   if empty(maparg('zI', 'n'))
-    nmap <silent> zI :let &foldlevel = &foldlevelstart<CR>
+    if &foldlevelstart < 0
+      nnoremap <silent> zI zM<BAR>zr<CR>
+    else
+      nnoremap <silent> zI :let &foldlevel = &foldlevelstart<CR>
+    endif
   endif
 " 1}}}
 
