@@ -95,7 +95,7 @@ if exists('*minpac#init')
 
   call minpac#add('StanAngeloff/php.vim')
   " call minpac#add('shawncplus/phpcomplete.vim')
-  call minpac#add('phpactor/phpactor', {'do': '!composer install --no-dev -o'})
+  call minpac#add('phpactor/phpactor', {'do': '!composer install -o'})
   call minpac#add('ncm2/ncm2')
     call minpac#add('roxma/nvim-yarp')
   call minpac#add('ncm2/ncm2-path')
