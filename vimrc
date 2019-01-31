@@ -18,7 +18,8 @@ set path+=**
 set noautochdir
 " The goal is to speed up the find mainly, try and check if that doesn't screw
 " something up
-set wildignore+=*/vendor/*,*/node_modules/*,*/var/*,*/web/build/*
+" set wildignore+=*/.git/*,*/vendor/*,*/node_modules/*,*/var/*,*/web/build/*
+set wildignore+=*/.git/*,*/node_modules/*,*/var/*,*/web/build/*
 
 " set mouse=a " Try to force myself to not use the mouse
 set hidden
@@ -137,6 +138,8 @@ if exists('*minpac#init')
   call minpac#add('sniphpets/sniphpets-postfix-codes')
     call minpac#add('sniphpets/sniphpets')
 
+  call minpac#add('vim-vdebug/vdebug')
+
   call minpac#add('janko-m/vim-test')
   call minpac#add('benmills/vimux')
 
@@ -148,6 +151,13 @@ if exists('*minpac#init')
   call minpac#add('etdev/vim-hexcolor')
 
   " call minpac#add('kana/vim-vspec', {'type': 'opt'})
+  call minpac#add('kana/vim-niceblock')
+  call minpac#add('kana/vim-smartinput')
+  call minpac#add('kana/vim-smartword')
+  call minpac#add('kana/vim-textobj-user') " Require for textobj plugins
+  call minpac#add('kana/vim-textobj-function')
+  call minpac#add('kana/vim-textobj-syntax')
+  " call minpac#add('kana/vim-textobj-indent')
 
   call minpac#add('scrooloose/nerdtree')
   call minpac#add('Xuyuanp/nerdtree-git-plugin')

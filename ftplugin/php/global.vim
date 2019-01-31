@@ -7,5 +7,4 @@ setlocal foldlevel=1 " To automaticaly open classes folds
 nnoremap <silent> <Leader>pk :silent execute ':!xdg-open ' .
   \ 'https://php.net/en/' . expand('<cword>')<CR>
 
-
 " vim:ts=2:sw=2:et:fdm=marker
