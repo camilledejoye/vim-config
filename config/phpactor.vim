@@ -2,7 +2,7 @@
 " Disabled  because it doesn't provide build in completion
 " Example of \LogicException
 " Need to see why... kind of stupid !
-" autocmd FileType php setlocal omnifunc=phpactor#Complete
+autocmd FileType php setlocal omnifunc=phpactor#Complete
 
 " let g:phpactorOmniError = v:true " Enable useful error messages when completion is invoked
 
