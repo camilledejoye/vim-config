@@ -11,7 +11,7 @@ function! s:handleClosingParenthese() abort
   endif
 endfunction
 
-augroup HandleClosingParenthese
-  autocmd!
-  autocmd InsertCharPre * :call <SID>handleClosingParenthese()
-augroup END
+" augroup HandleClosingParenthese
+"   autocmd!
+"   autocmd InsertCharPre * :call <SID>handleClosingParenthese()
+" augroup END
