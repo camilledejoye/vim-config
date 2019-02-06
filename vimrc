@@ -140,7 +140,7 @@ if exists('*minpac#init')
 
   call minpac#add('vim-vdebug/vdebug')
 
-  call minpac#add('elythyr/vim-test', {'branch': 'dev'})
+  call minpac#add('git@github.com:elythyr/vim-test', {'branch': 'dev'})
   call minpac#add('benmills/vimux')
 
   " call minpac#add('xolox/vim-easytags')
