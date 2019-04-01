@@ -175,6 +175,11 @@ if exists('*minpac#init')
   call minpac#add('lumiliet/vim-twig')
 
   call minpac#add('junegunn/fzf.vim')
+
+  call minpac#add('pangloss/vim-javascript')
+  call minpac#add('ryym/vim-riot')
+
+  call minpac#add('alvan/vim-closetag')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
