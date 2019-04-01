@@ -173,6 +173,8 @@ if exists('*minpac#init')
   call minpac#add('git@github.com:elythyr/php-foldexpr.vim.git')
 
   call minpac#add('lumiliet/vim-twig')
+
+  call minpac#add('junegunn/fzf.vim')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
