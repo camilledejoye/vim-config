@@ -34,6 +34,17 @@ augroup ncm2_add_sources
     \ 'complete_pattern': ':\s*',
     \ 'on_complete':      ['ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
   \ })
+
+  autocmd User Ncm2Plugin call ncm2#register_source({
+    \ 'name' :            'behat',
+    \ 'priority':         9,
+    \ 'subscope_enable':  0,
+    \ 'scope':            ['cucumber','behat'],
+    \ 'mark':             'behat',
+    \ 'word_pattern':     '[\w\-]+',
+    \ 'complete_pattern': ':\s*',
+    \ 'on_complete':      ['ncm2#on_complete#omni', 'phpactor#Complete'],
+  \ })
 augroup END
 
 " Press enter key to trigger snippet expansion
