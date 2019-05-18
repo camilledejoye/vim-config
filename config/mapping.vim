@@ -70,10 +70,7 @@ set pastetoggle=<F12>
 " 1}}}
 
 " Various {{{1
-  " Quick quit insert mode by pressing jk at the same time
-  " Like the idea, want to gave it a try
-  inoremap jk <Esc>
-  inoremap kj <Esc>
+  nnoremap <silent> <Leader>on :on<CR>
 
   " Quick shell command
   nnoremap ! :!
