@@ -78,4 +78,8 @@ set pastetoggle=<F12>
   nnoremap <C-l> :noh<CR>
 " 1}}}
 
+" Rg {{{1
+  nnoremap <silent> <Leader>rg :Rg \b<C-R>=expand('<cword>')<CR>\b<CR>
+" 1}}}
+
 " vim: ts=2 sw=2 et fdm=marker
