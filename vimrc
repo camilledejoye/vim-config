@@ -71,8 +71,8 @@ if exists('*minpac#init')
   "call minpac#add('scrooloose/nerdcommenter')
   call minpac#add('tpope/vim-scriptease')
   call minpac#add('tpope/vim-unimpaired')
-  call minpac#add('tpope/vim-endwise')
-  call minpac#add('tpope/vim-speeddating')
+  " call minpac#add('tpope/vim-endwise')
+  " call minpac#add('tpope/vim-speeddating')
   call minpac#add('tpope/vim-abolish')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('tpope/vim-repeat')
@@ -82,21 +82,22 @@ if exists('*minpac#init')
 
   call minpac#add('w0rp/ale')
 
-  call minpac#add('easymotion/vim-easymotion')
+  " call minpac#add('easymotion/vim-easymotion')
 
-  call minpac#add('kien/ctrlp.vim')
+  " call minpac#add('kien/ctrlp.vim')
 
   call minpac#add('skywind3000/asyncrun.vim')
 
   " call minpac#add('ervandew/supertab')
-  call minpac#add('vim-syntastic/syntastic')
+  " call minpac#add('vim-syntastic/syntastic')
 
-  call minpac#add('godlygeek/tabular')
+  " call minpac#add('godlygeek/tabular')
   call minpac#add('junegunn/vim-easy-align')
 
   call minpac#add('StanAngeloff/php.vim')
   " call minpac#add('shawncplus/phpcomplete.vim')
-  call minpac#add('phpactor/phpactor', {'do': '!composer install -o'})
+  call minpac#add('phpactor/phpactor', {'branch': 'develop', 'do': '!composer install -o'})
+      call minpac#add('junegunn/vader.vim') " To launch the tests
   call minpac#add('ncm2/ncm2')
     call minpac#add('roxma/nvim-yarp')
   call minpac#add('ncm2/ncm2-path')
@@ -113,9 +114,9 @@ if exists('*minpac#init')
 
   call minpac#add('othree/csscomplete.vim')
 
-  call minpac#add('garbas/vim-snipmate')
-    call minpac#add('tomtom/tlib_vim')
-    call minpac#add('marcweber/vim-addon-mw-utils')
+  " call minpac#add('garbas/vim-snipmate')
+  "   call minpac#add('tomtom/tlib_vim')
+  "   call minpac#add('marcweber/vim-addon-mw-utils')
 
   " call minpac#add('lvht/phpcd.vim', {'type': 'opt', 'do': '!composer install --no-dev -o'})
   " augroup loadphpcd
@@ -141,7 +142,8 @@ if exists('*minpac#init')
   call minpac#add('vim-vdebug/vdebug')
 
   call minpac#add('git@github.com:elythyr/vim-test', {'branch': 'dev'})
-  call minpac#add('benmills/vimux')
+  " call minpac#add('benmills/vimux') " Could be interesting, I should check
+  " it out when I will have some time
 
   " call minpac#add('xolox/vim-easytags')
   " call minpac#add('xolox/vim-misc')
@@ -153,10 +155,10 @@ if exists('*minpac#init')
   " call minpac#add('kana/vim-vspec', {'type': 'opt'})
   call minpac#add('kana/vim-niceblock')
   call minpac#add('kana/vim-smartinput')
-  call minpac#add('kana/vim-smartword')
+  " call minpac#add('kana/vim-smartword')
   call minpac#add('kana/vim-textobj-user') " Require for textobj plugins
   call minpac#add('kana/vim-textobj-function')
-  call minpac#add('kana/vim-textobj-syntax')
+  " call minpac#add('kana/vim-textobj-syntax')
   " call minpac#add('kana/vim-textobj-indent')
 
   call minpac#add('scrooloose/nerdtree')

@@ -17,6 +17,8 @@ command! -bang -nargs=* -complete=dir RRg
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 
+command! -bang H call fzf#vim#helptags(<bang>0)
+
 unlet s:my_dotfiles_dir
 
 " vim: ts=2 sw=2 et fdm=marker

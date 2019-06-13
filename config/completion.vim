@@ -40,7 +40,7 @@ augroup Completion
   autocmd CompleteDone * call s:ClosePreviewAfterComplete()
 augroup END
 
-inoremap <expr> <Esc> (pumvisible() ? "\<C-e>" : "\<Esc>")
-inoremap <expr> <CR>  (pumvisible() ? "\<c-y>" : "\<CR>")
+" inoremap <expr> <Esc> (pumvisible() ? "\<C-e>" : "\<Esc>")
+" inoremap <expr> <CR>  (pumvisible() ? "\<c-y>" : "\<CR>")
 
 " vim: et ts=2 sw=2 fdm=marker
