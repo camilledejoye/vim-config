@@ -4,7 +4,7 @@ let s:my_dotfiles_dir = fnamemodify(resolve(expand('<sfile>')), ':p:h:h:h')
 execute 'set runtimepath+='. s:my_dotfiles_dir .'/fzf'
 
 " Search Files
-nmap <Leader>sf :Files<CR>
+nmap <Leader>sf :GFiles<CR>
 
 " Search Buffers
 nmap <Leader>sb :Buffers<CR>
