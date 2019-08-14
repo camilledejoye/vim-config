@@ -9,6 +9,9 @@ nmap <Leader>sf :GFiles<CR>
 " Search Buffers
 nmap <Leader>sb :Buffers<CR>
 
+" Search Commits
+nmap <Leader>sc :Commits<CR>
+
 " To be able to pass options
 command! -bang -nargs=* -complete=dir RRg
   \ call fzf#vim#grep(
