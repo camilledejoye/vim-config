@@ -66,7 +66,8 @@ set pastetoggle=<F12>
 
 " Fugitive {{{1
   nnoremap <silent> <Leader>gb :Gblame<CR>
-  nnoremap <silent> <Leader>gs :Gstatus<CR>
+  " Open the status window in a new tab
+  nnoremap <silent> <Leader>gs :Gtabedit :<CR>
 " 1}}}
 
 " Various {{{1
