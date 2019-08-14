@@ -23,7 +23,10 @@ let g:projectionist_heuristics = {
         \ 'src/**/Command/*Command.php': {
             \ 'type': 'command',
             \ 'skeleton': 'sfcommand',
-            \ 'alternate': 'src/{dirname}/Handler/{basename}Handler.php',
+            \ 'alternate': [
+                \ 'src/{dirname}/Handler/{basename}Handler.php',
+                \ 'src/{dirname}/Command/{basename}CommandHandler.php',
+            \ ],
         \ },
         \ 'src/**/Handler/*Handler.php': {
             \ 'type': 'handler',
