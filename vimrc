@@ -98,6 +98,7 @@ if exists('*minpac#init')
   " call minpac#add('shawncplus/phpcomplete.vim')
   call minpac#add('phpactor/phpactor', {'branch': 'develop', 'do': '!composer install -o'})
       call minpac#add('junegunn/vader.vim') " To launch the tests
+  call minpac#add('elythyr/phpactor-mappings')
   call minpac#add('ncm2/ncm2')
     call minpac#add('roxma/nvim-yarp')
   call minpac#add('ncm2/ncm2-path')
