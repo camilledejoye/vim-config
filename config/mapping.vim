@@ -35,12 +35,12 @@ set pastetoggle=<F12>
   nnoremap <C-h> <C-^>
 
   " Quick access on some of the most used commands
-  nnoremap <Leader>w :w<CR>
-  inoremap <Leader>w <Esc>:w<CR>
-  nnoremap <Leader>x :x<CR>
-  inoremap <Leader>x <Esc>:x<CR>
-  nnoremap <Leader>q :q<CR>
-  inoremap <Leader>q <Esc>:q<CR>
+  nnoremap <silent> <Leader>w :w<CR>
+  inoremap <silent> <Leader>w <Esc>:w<CR>
+  nnoremap <silent> <Leader>x :x<CR>
+  inoremap <silent> <Leader>x <Esc>:x<CR>
+  nnoremap <silent> <Leader>q :q<CR>
+  inoremap <silent> <Leader>q <Esc>:q<CR>
 " 1}}}
 
 " Folds {{{1
