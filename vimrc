@@ -81,6 +81,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-eunuch')
 
   call minpac#add('w0rp/ale')
+  call minpac#add('editorconfig/editorconfig-vim')
 
   " call minpac#add('easymotion/vim-easymotion')
 
