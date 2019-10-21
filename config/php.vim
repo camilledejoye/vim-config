@@ -8,6 +8,7 @@
 " php.vim configurations {{{
 let g:php_html_in_strings = 1
 let g:sql_type_default    = 'sqloracle' " SQL syntax colorscheme
+let g:PHP_noArrowMatching = 1 " Properly aligns "->" on multiple lines
 
 function! s:PhpSyntaxOverride() " {{{
   hi! def link phpDocTags       phpConstants
