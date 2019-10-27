@@ -103,7 +103,7 @@ let g:projectionist_heuristics = {
             \ 'type': 'log',
         \ },
     \ },
-    \ 'app/config/config.yml': {
+    \ 'app/config/config.yml&src/': {
         \ 'app/config/*|src/**/Ressources/config/*': {
             \ 'type': 'config',
         \ },
@@ -169,7 +169,7 @@ let g:projectionist_heuristics = {
     \ },
 \ }
 
-nnoremap <Leader>a :A<CR>
-nnoremap <Leader>va :AV<CR>
+nnoremap <silent> <Leader>a :A<CR>
+nnoremap <silent> <Leader>va :AV<CR>
 
 " vim: ts=2 sw=2 et fdm=marker
