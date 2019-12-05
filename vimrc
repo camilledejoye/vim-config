@@ -77,6 +77,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('tpope/vim-repeat')
   call minpac#add('tpope/vim-dispatch')
+  call minpac#add('radenling/vim-dispatch-neovim')
   call minpac#add('tpope/vim-projectionist')
   call minpac#add('tpope/vim-eunuch')
 
