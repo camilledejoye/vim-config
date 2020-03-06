@@ -1,3 +1,7 @@
+if 2 != exists(':ALEEnable')
+  finish
+endif
+
 call ale#Set('php_phpcsfixer_options', '')
 call ale#Set('php_phpcsfixer_executable', 'php-cs-fixer')
 call ale#Set('php_phpcsfixer_use_global', get(g:, 'ale_use_global_executables', 0))
