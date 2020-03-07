@@ -3,7 +3,17 @@ let g:projectionist_heuristics = {
         \ 'src/*.php': {
             \ 'type': 'src',
             \ 'skeleton': 'class',
-            \ 'alternate': 'tests/{}Test.php',
+            \ 'alternate': [
+              \ 'tests/Unit/{}Test.php',
+              \ 'tests/Integration/{}Test.php',
+              \ 'tests/Functional/{}Test.php',
+              \ 'tests/{}Test.php',
+            \ ]
+        \ },
+        \ 'tests/Unit/*Test.php': {
+            \ 'type': 'unittest',
+            \ 'skeleton': 'pucase',
+            \ 'alternate': 'src/{}.php',
         \ },
         \ 'tests/*Test.php': {
             \ 'type': 'test',
