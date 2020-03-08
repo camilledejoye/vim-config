@@ -76,7 +76,7 @@ set pastetoggle=<F12>
   " Quick shell command
   nnoremap ! :!
 
-  nnoremap <C-l> :noh<CR>
+  nnoremap <silent> <C-l> :noh<CR>
 " 1}}}
 
 " Rg {{{1
