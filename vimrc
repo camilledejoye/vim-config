@@ -83,6 +83,7 @@ if exists('*minpac#init')
 
   call minpac#add('w0rp/ale')
   call minpac#add('editorconfig/editorconfig-vim')
+  call minpac#add('terryma/vim-multiple-cursors')
 
   " call minpac#add('easymotion/vim-easymotion')
 
