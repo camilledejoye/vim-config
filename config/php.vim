@@ -19,8 +19,7 @@ endfunction " }}}
 
 augroup MyPhpConfiguration
   autocmd!
-  autocmd FileType php call <Sid>PhpSyntaxOverride()
-  autocmd FileType php set tags^=./.php.tags;
+  autocmd FileType php call <SID>PhpSyntaxOverride()
 augroup END
 
 " vim: et ts=2 sw=2 fdm=marker

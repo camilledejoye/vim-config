@@ -1,6 +1,6 @@
 let s:my_dotfiles_dir = fnamemodify(resolve(expand('<sfile>')), ':p:h:h:h')
 
-" The directory of zfz must also be in the runtimepath
+" The directory of fzf must also be in the runtimepath
 execute 'set runtimepath+='. s:my_dotfiles_dir .'/fzf'
 
 " Search Files

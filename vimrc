@@ -5,6 +5,9 @@ let s:my_vim_dir = fnamemodify(resolve(expand('<sfile>')), ':p:h')
 execute 'set runtimepath^=' . s:my_vim_dir
 execute 'set runtimepath+=' . s:my_vim_dir . '/after'
 let &packpath = &runtimepath
+
+" To add a personal templates directory to the runtimepath
+execute 'set runtimepath+=' . s:my_vim_dir . '/templates'
 " }}}
 
 " Global {{{
@@ -13,7 +16,7 @@ let mapleader = ','
 filetype plugin indent on
 syntax on
 
-" Try to user Vim 'funzy' finder
+" Try to user Vim 'fuzzy' finder
 set path+=**
 set noautochdir
 " The goal is to speed up the find mainly, try and check if that doesn't screw
@@ -21,7 +24,6 @@ set noautochdir
 " set wildignore+=*/.git/*,*/vendor/*,*/node_modules/*,*/var/*,*/web/build/*
 set wildignore+=*/.git/*,*/node_modules/*,*/var/*,*/web/build/*
 
-" set mouse=a " Try to force myself to not use the mouse
 set hidden
 set number
 set relativenumber
@@ -37,9 +39,6 @@ set splitright
 set scrolloff=3
 set diffopt+=vertical
 set wildmenu
-
-" To add a personal templates directory to the runtimepath
-execute 'set runtimepath+=' . s:my_vim_dir . '/templates'
 
 if has('termguicolors')
   set termguicolors
@@ -87,21 +86,17 @@ if exists('*minpac#init')
 
   " call minpac#add('easymotion/vim-easymotion')
 
-  " call minpac#add('kien/ctrlp.vim')
-
   call minpac#add('skywind3000/asyncrun.vim')
-
-  " call minpac#add('ervandew/supertab')
-  " call minpac#add('vim-syntastic/syntastic')
 
   " call minpac#add('godlygeek/tabular')
   call minpac#add('junegunn/vim-easy-align')
 
   call minpac#add('StanAngeloff/php.vim')
-  " call minpac#add('shawncplus/phpcomplete.vim')
   call minpac#add('phpactor/phpactor', {'branch': 'develop', 'do': '!composer install -o'})
-      call minpac#add('junegunn/vader.vim') " To launch the tests
-  call minpac#add('elythyr/phpactor-mappings')
+    call minpac#add('junegunn/vader.vim') " To launch the tests
+    call minpac#add('elythyr/phpactor-mappings')
+  call minpac#add('git@github.com:elythyr/vim-php-refactoring-toolbox.git', {'branch': 'improvements'})
+
   call minpac#add('ncm2/ncm2')
     call minpac#add('roxma/nvim-yarp')
   call minpac#add('ncm2/ncm2-path')
@@ -117,19 +112,7 @@ if exists('*minpac#init')
   " https://github.com/2072/PHP-Indenting-for-VIm
 
   call minpac#add('othree/csscomplete.vim')
-
-  " call minpac#add('garbas/vim-snipmate')
-  "   call minpac#add('tomtom/tlib_vim')
-  "   call minpac#add('marcweber/vim-addon-mw-utils')
-
-  " call minpac#add('lvht/phpcd.vim', {'type': 'opt', 'do': '!composer install --no-dev -o'})
-  " augroup loadphpcd
-  "     autocmd!
-  "     autocmd FileType php packadd phpcd.vim
-  " augroup END
-
-  " call minpac#add('majutsushi/tagbar', {'type': 'opt'})
-  " call minpac#add('vim-php/tagbar-phpctags.vim', {'type': 'opt'})
+  call minpac#add('etdev/vim-hexcolor')
 
   call minpac#add('SirVer/ultisnips')
   call minpac#add('honza/vim-snippets')
@@ -149,12 +132,7 @@ if exists('*minpac#init')
   " call minpac#add('benmills/vimux') " Could be interesting, I should check
   " it out when I will have some time
 
-  " call minpac#add('xolox/vim-easytags')
-  " call minpac#add('xolox/vim-misc')
-
   call minpac#add('airblade/vim-gitgutter')
-
-  call minpac#add('etdev/vim-hexcolor')
 
   " call minpac#add('kana/vim-vspec', {'type': 'opt'})
   call minpac#add('kana/vim-niceblock')
@@ -167,14 +145,7 @@ if exists('*minpac#init')
 
   call minpac#add('scrooloose/nerdtree')
   call minpac#add('Xuyuanp/nerdtree-git-plugin')
-  " call minpac#add('git@github.com:elythyr/php.vim.git', {'branch': 'phpdoc-folding'})
-  " call minpac#add('git@github.com:elythyr/phpcd.vim.git', {'type': 'opt'})
-  " call minpac#add('git@github.com:elythyr/phpunit.vim.git')
-  " call minpac#add('vim-scripts/AnsiEsc.vim')
-  call minpac#add('git@github.com:elythyr/vim-php-refactoring-toolbox.git', {'branch': 'improvements'})
-  " call minpac#add('git@github.com:elythyr/vim-snippets.git', {'branch': 'perso'})
-  " call minpac#add('git@github.com:elythyr/vim-sync.git', {'branch': 'improvements'})
-  " call minpac#add('elythyr/vim-twig')
+
   call minpac#add('git@github.com:elythyr/vim-cleanfold.git')
   call minpac#add('git@github.com:elythyr/php-foldexpr.vim.git')
 
@@ -196,7 +167,7 @@ command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 " }}}
 
 " Autoload all config files
-for s:config_file in split(glob(s:my_vim_dir . '/config/*.vim'), "\n")
+for s:config_file in glob(s:my_vim_dir . '/config/*.vim', v:false, v:true)
     execute 'source ' s:config_file
 endfor
 
