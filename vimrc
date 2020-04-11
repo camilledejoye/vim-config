@@ -136,12 +136,14 @@ if exists('*minpac#init')
 
   " call minpac#add('kana/vim-vspec', {'type': 'opt'})
   call minpac#add('kana/vim-niceblock')
-  call minpac#add('kana/vim-smartinput')
+  " call minpac#add('kana/vim-smartinput')
   " call minpac#add('kana/vim-smartword')
   call minpac#add('kana/vim-textobj-user') " Require for textobj plugins
   call minpac#add('kana/vim-textobj-function')
   " call minpac#add('kana/vim-textobj-syntax')
   " call minpac#add('kana/vim-textobj-indent')
+
+  call minpac#add('jiangmiao/auto-pairs') " Try in place of kana/vim-smartinput
 
   call minpac#add('scrooloose/nerdtree')
   call minpac#add('Xuyuanp/nerdtree-git-plugin')
