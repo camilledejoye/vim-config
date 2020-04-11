@@ -164,6 +164,7 @@ if exists('*packager#init')
   call packager#add('FooSoft/vim-argwrap')
 
   call packager#add('powerman/vim-plugin-viewdoc')
+  call packager#add('vimwiki/vimwiki', { 'type': 'opt' })
   call packager#add('iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } })
 endif
 
