@@ -159,6 +159,8 @@ if exists('*minpac#init')
   call minpac#add('alvan/vim-closetag')
 
   call minpac#add('FooSoft/vim-argwrap')
+
+  call minpac#add('powerman/vim-plugin-viewdoc')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
