@@ -83,6 +83,7 @@ if exists('*packager#init')
 
   call packager#add('w0rp/ale')
   call packager#add('editorconfig/editorconfig-vim', { 'type': 'opt' })
+
   call packager#add('terryma/vim-multiple-cursors')
 
   " call packager#add('easymotion/vim-easymotion')
