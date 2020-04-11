@@ -79,9 +79,10 @@ if exists('*packager#init')
   call packager#add('radenling/vim-dispatch-neovim')
   call packager#add('tpope/vim-projectionist')
   call packager#add('tpope/vim-eunuch')
+  call packager#add('tpope/vim-sleuth')
 
   call packager#add('w0rp/ale')
-  call packager#add('editorconfig/editorconfig-vim')
+  call packager#add('editorconfig/editorconfig-vim', { 'type': 'opt' })
   call packager#add('terryma/vim-multiple-cursors')
 
   " call packager#add('easymotion/vim-easymotion')
