@@ -153,6 +153,7 @@ if exists('*packager#init')
   call packager#add('git@github.com:elythyr/php-foldexpr.vim.git')
 
   call packager#add('lumiliet/vim-twig')
+  call packager#add('elzr/vim-json') " Improved JSON handling
 
   call packager#add('junegunn/fzf.vim')
 
