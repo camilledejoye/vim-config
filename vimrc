@@ -94,7 +94,7 @@ if exists('*minpac#init')
   call minpac#add('StanAngeloff/php.vim')
   call minpac#add('phpactor/phpactor', {'branch': 'develop', 'do': '!composer install -o'})
     call minpac#add('junegunn/vader.vim') " To launch the tests
-    call minpac#add('elythyr/phpactor-mappings')
+    call minpac#add('git@github.com:elythyr/phpactor-mappings.git')
   call minpac#add('git@github.com:elythyr/vim-php-refactoring-toolbox.git', {'branch': 'improvements'})
 
   call minpac#add('ncm2/ncm2')
