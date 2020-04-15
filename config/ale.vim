@@ -5,6 +5,7 @@ let g:ale_fixers = { 'php': [
   \ 'remove_trailing_lines',
   \ 'trim_whitespace',
 \ ]}
+let g:ale_php_cs_fixer_options = '--using-cache=no --quiet --no-interaction'
 
 nmap <silent> <Leader>fs <Plug>(ale_fix)<CR>
 
