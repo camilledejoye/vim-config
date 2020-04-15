@@ -5,7 +5,7 @@ let g:phpactorCustomMappings = [
   \ ['<Leader>pp', '<Plug>phpactorContextMenu', 'n'],
   \ ['<Leader>pn', '<Plug>phpactorNavigate', 'n'],
   \ ['<Leader>pt', '<Plug>phpactorTransform', 'n'],
-  \ ['<Leader>ph', '<Plug>phpactorHover', 'n'],
+  \ ['<Leader>hh', '<Plug>phpactorHover', 'n'],
 \ ]
 
 " vim: et ts=2 sw=2 fdm=marker
