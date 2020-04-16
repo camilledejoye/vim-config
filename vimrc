@@ -93,7 +93,7 @@ if exists('*packager#init')
   call packager#add('junegunn/vim-easy-align')
 
   call packager#add('StanAngeloff/php.vim')
-  call packager#add('phpactor/phpactor', {'branch': 'develop', 'do': '!composer install -o'})
+  call packager#add('phpactor/phpactor', {'branch': 'develop', 'do': 'composer install -o'})
     call packager#add('junegunn/vader.vim') " To launch the tests
     call packager#add('elythyr/phpactor-mappings')
   call packager#add('git@github.com:elythyr/vim-php-refactoring-toolbox.git', {'branch': 'improvements'})
