@@ -62,8 +62,6 @@ if exists('*packager#init')
 
   " call packager#add('easymotion/vim-easymotion')
 
-  call packager#add('skywind3000/asyncrun.vim')
-
   " Equivalent of easy-align, I keep it until I decide which one I prefer
   " call packager#add('godlygeek/tabular')
 
