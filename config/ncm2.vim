@@ -1,3 +1,16 @@
+if exists('*packager#init')
+  call packager#add('ncm2/ncm2')
+    call packager#add('roxma/nvim-yarp')
+  call packager#add('ncm2/ncm2-path')
+  " call packager#add('ncm2/ncm2-tmux')
+  " call packager#add('wellle/tmux-complete')
+  call packager#add('ncm2/ncm2-cssomni')
+  call packager#add('ncm2/ncm2-ultisnips') " Experimental
+  " call packager#add('ncm2/ncm2-snipmate') " Experimental
+  call packager#add('ncm2/ncm2-html-subscope')
+  call packager#add('phpactor/ncm2-phpactor')
+endif
+
 augroup ncm2_completeopt
   autocmd!
   autocmd User Ncm2PopupOpen  setlocal completeopt=noinsert,menuone,noselect

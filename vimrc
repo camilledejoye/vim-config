@@ -58,55 +58,16 @@ if exists('*packager#init')
 
   call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
 
-  call packager#add('wikitopian/hardmode')
-
-  call packager#add('vim-airline/vim-airline')
-  call packager#add('vim-airline/vim-airline-themes')
-
-  call packager#add('tpope/vim-surround')
-  call packager#add('tpope/vim-commentary')
-  "call packager#add('scrooloose/nerdcommenter')
-  call packager#add('tpope/vim-scriptease')
-  call packager#add('tpope/vim-unimpaired')
-  " call packager#add('tpope/vim-endwise')
-  " call packager#add('tpope/vim-speeddating')
-  call packager#add('tpope/vim-abolish')
-  call packager#add('tpope/vim-fugitive')
-  call packager#add('tpope/vim-repeat')
-  call packager#add('tpope/vim-dispatch')
-  call packager#add('radenling/vim-dispatch-neovim')
-  call packager#add('tpope/vim-projectionist')
-  call packager#add('tpope/vim-eunuch')
-  call packager#add('tpope/vim-sleuth')
-
-  call packager#add('w0rp/ale')
-  call packager#add('editorconfig/editorconfig-vim', { 'type': 'opt' })
-
   call packager#add('terryma/vim-multiple-cursors')
 
   " call packager#add('easymotion/vim-easymotion')
 
   call packager#add('skywind3000/asyncrun.vim')
 
+  " Equivalent of easy-align, I keep it until I decide which one I prefer
   " call packager#add('godlygeek/tabular')
-  call packager#add('junegunn/vim-easy-align')
 
-  call packager#add('StanAngeloff/php.vim')
-  call packager#add('phpactor/phpactor', {'branch': 'develop', 'do': 'composer install -o'})
-    call packager#add('junegunn/vader.vim') " To launch the tests
-    call packager#add('elythyr/phpactor-mappings')
-  call packager#add('git@github.com:elythyr/vim-php-refactoring-toolbox.git', {'branch': 'improvements'})
-
-  call packager#add('ncm2/ncm2')
-    call packager#add('roxma/nvim-yarp')
-  call packager#add('ncm2/ncm2-path')
-  " call packager#add('ncm2/ncm2-tmux')
-  " call packager#add('wellle/tmux-complete')
-  call packager#add('ncm2/ncm2-cssomni')
-  call packager#add('ncm2/ncm2-ultisnips') " Experimental
-  " call packager#add('ncm2/ncm2-snipmate') " Experimental
-  call packager#add('ncm2/ncm2-html-subscope')
-  call packager#add('phpactor/ncm2-phpactor')
+  call packager#add('junegunn/vader.vim') " To launch the VimL tests
 
   " Don't feel the need for it, but I keep the link in case
   " https://github.com/2072/PHP-Indenting-for-VIm
@@ -114,25 +75,10 @@ if exists('*packager#init')
   call packager#add('othree/csscomplete.vim')
   call packager#add('etdev/vim-hexcolor')
 
-  call packager#add('SirVer/ultisnips')
-  call packager#add('honza/vim-snippets')
-  call packager#add('git@github.com:elythyr/pdv.git', {'branch': 'improvements'})
-    call packager#add('tobyS/vmustache')
-
-  call packager#add('sniphpets/sniphpets-common')
-  call packager#add('sniphpets/sniphpets-symfony')
-  call packager#add('sniphpets/sniphpets-phpunit')
-  call packager#add('sniphpets/sniphpets-doctrine')
-  call packager#add('sniphpets/sniphpets-postfix-codes')
-    call packager#add('sniphpets/sniphpets')
-
   call packager#add('vim-vdebug/vdebug')
 
-  call packager#add('git@github.com:elythyr/vim-test', {'branch': 'dev'})
   " call packager#add('benmills/vimux') " Could be interesting, I should check
   " it out when I will have some time
-
-  call packager#add('airblade/vim-gitgutter')
 
   " call packager#add('kana/vim-vspec', {'type': 'opt'})
   call packager#add('kana/vim-niceblock')
@@ -143,8 +89,6 @@ if exists('*packager#init')
   " call packager#add('kana/vim-textobj-syntax')
   " call packager#add('kana/vim-textobj-indent')
 
-  call packager#add('jiangmiao/auto-pairs') " Try in place of kana/vim-smartinput
-
   call packager#add('scrooloose/nerdtree')
   call packager#add('Xuyuanp/nerdtree-git-plugin')
 
@@ -154,17 +98,6 @@ if exists('*packager#init')
   call packager#add('lumiliet/vim-twig')
   call packager#add('elzr/vim-json') " Improved JSON handling
 
-  call packager#add('junegunn/fzf.vim')
-
-  call packager#add('pangloss/vim-javascript')
-  call packager#add('ryym/vim-riot')
-
-  call packager#add('alvan/vim-closetag')
-
-  call packager#add('FooSoft/vim-argwrap')
-
-  call packager#add('powerman/vim-plugin-viewdoc')
-  call packager#add('vimwiki/vimwiki', { 'type': 'opt' })
   call packager#add('iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } })
 endif
 

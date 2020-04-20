@@ -1,3 +1,7 @@
+if exists('*packager#init')
+  call packager#add('jiangmiao/auto-pairs') " Try in place of kana/vim-smartinput
+endif
+
 " Mappings
 " '' to disable the mapping
 let g:AutoPairsShortcutToggle = ''

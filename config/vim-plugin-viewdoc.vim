@@ -1,3 +1,7 @@
+if exists('*packager#init')
+  call packager#add('powerman/vim-plugin-viewdoc')
+endif
+
 let g:no_viewdoc_abbrev = 1 " Disable abbreviations
 let g:no_viewdoc_maps = 1 " Disable mappings
 let g:viewdoc_open = 'botright vnew' "How to open the help window

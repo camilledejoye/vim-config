@@ -1,7 +1,9 @@
-let s:my_dotfiles_dir = fnamemodify(resolve(expand('<sfile>')), ':p:h:h:h')
+if exists('*packager#init')
+  call packager#add('junegunn/fzf.vim')
+endif
 
 " The directory of fzf must also be in the runtimepath
-execute 'set runtimepath+='. s:my_dotfiles_dir .'/fzf'
+execute 'set runtimepath+='. $DOTFILES .'/fzf'
 
 " Search Files
 nmap <Leader>sf :GFiles<CR>
@@ -21,7 +23,5 @@ command! -bang -nargs=* -complete=dir RRg
   \   <bang>0)
 
 command! -bang H call fzf#vim#helptags(<bang>0)
-
-unlet s:my_dotfiles_dir
 
 " vim: ts=2 sw=2 et fdm=marker

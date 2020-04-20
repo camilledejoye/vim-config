@@ -1,3 +1,7 @@
+if exists('*packager#init')
+  call packager#add('junegunn/vim-easy-align')
+endif
+
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 

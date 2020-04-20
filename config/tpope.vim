@@ -1,3 +1,20 @@
+if exists('*packager#init')
+  call packager#add('tpope/vim-surround')
+  call packager#add('tpope/vim-commentary')
+  call packager#add('tpope/vim-scriptease')
+  call packager#add('tpope/vim-unimpaired')
+  " call packager#add('tpope/vim-endwise')
+  " call packager#add('tpope/vim-speeddating')
+  call packager#add('tpope/vim-abolish')
+  call packager#add('tpope/vim-fugitive')
+  call packager#add('tpope/vim-repeat')
+  call packager#add('tpope/vim-dispatch')
+  call packager#add('radenling/vim-dispatch-neovim')
+  call packager#add('tpope/vim-projectionist')
+  call packager#add('tpope/vim-eunuch')
+  call packager#add('tpope/vim-sleuth')
+endif
+
 let g:projectionist_heuristics = {
     \ 'composer.json&src/&tests/': {
         \ 'src/*.php': {

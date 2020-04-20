@@ -1,3 +1,9 @@
+if exists('*packager#init')
+  call packager#add('git@github.com:elythyr/vim-php-refactoring-toolbox.git', {
+    \ 'branch': 'improvements'
+  \ })
+endif
+
 " The function to use to document the current line
 let g:vim_php_refactoring_phpdoc = 'pdv#DocumentWithSnip'
 

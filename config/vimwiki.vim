@@ -1,3 +1,7 @@
+if exists('*packager#init')
+  call packager#add('vimwiki/vimwiki', { 'type': 'opt' })
+endif
+
 let g:vimwiki_map_prefix = '<Leader>n'
 let g:vimwiki_list = [{'path': '~/vimwiki/',
   \ 'syntax': 'markdown', 'ext': '.md'}]

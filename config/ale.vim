@@ -1,3 +1,7 @@
+if exists('*packager#init')
+  call packager#add('w0rp/ale')
+endif
+
 let g:airline#extensions#ale#enabled = 1
 let g:ale_yaml_yamllint_options = '-d relaxed'
 let g:ale_fixers = { 'php': [

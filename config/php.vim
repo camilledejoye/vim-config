@@ -1,3 +1,17 @@
+if exists('*packager#init')
+  call packager#add('StanAngeloff/php.vim')
+
+  call packager#add('sniphpets/sniphpets-common')
+  call packager#add('sniphpets/sniphpets-symfony')
+  call packager#add('sniphpets/sniphpets-phpunit')
+  call packager#add('sniphpets/sniphpets-doctrine')
+  call packager#add('sniphpets/sniphpets-postfix-codes')
+  call packager#add('sniphpets/sniphpets')
+
+  call packager#add('git@github.com:elythyr/pdv.git', {'branch': 'improvements'})
+  call packager#add('tobyS/vmustache')
+endif
+
 " Mappings {{{
 " Start completion after typing -> or ::
 " Disable the time to test NCM2 and Phpactor
