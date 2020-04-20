@@ -1,6 +1,12 @@
-" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
-" found' messages
-set shortmess+=c
+augroup ncm2_completeopt
+  autocmd!
+  autocmd User Ncm2PopupOpen  setlocal completeopt=noinsert,menuone,noselect
+  " Do not use longest, it will still messed up when using <BS>
+  " Example, you made a typo: ncm2 find nothing and call Ncm2PopupClose
+  " Then you type <BS>, ncm2 will open the menu again but it will apply
+  " longest before the option is changed
+  autocmd User Ncm2PopupClose setlocal completeopt=menuone,preview
+augroup END
 
 " enable auto complete for `<backspace>`, `<c-w>` keys.
 " known issue https://github.com/ncm2/ncm2/issues/7
@@ -32,16 +38,16 @@ augroup ncm2_add_sources
     \ 'on_complete':      ['ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
   \ })
 
-  autocmd User Ncm2Plugin call ncm2#register_source({
-    \ 'name' :            'behat',
-    \ 'priority':         9,
-    \ 'subscope_enable':  0,
-    \ 'scope':            ['cucumber','behat'],
-    \ 'mark':             'behat',
-    \ 'word_pattern':     '[\w\-]+',
-    \ 'complete_pattern': ':\s*',
-    \ 'on_complete':      ['ncm2#on_complete#omni', 'phpactor#Complete'],
-  \ })
+  " autocmd User Ncm2Plugin call ncm2#register_source({
+  "   \ 'name' :            'behat',
+  "   \ 'priority':         9,
+  "   \ 'subscope_enable':  0,
+  "   \ 'scope':            ['cucumber','behat'],
+  "   \ 'mark':             'behat',
+  "   \ 'word_pattern':     '[\w\-]+',
+  "   \ 'complete_pattern': ':\s*',
+  "   \ 'on_complete':      ['ncm2#on_complete#omni', 'phpactor#Complete'],
+  " \ })
 augroup END
 
 " Press enter key to trigger snippet expansion
