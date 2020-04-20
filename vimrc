@@ -58,8 +58,6 @@ if exists('*packager#init')
 
   call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
 
-  call packager#add('chriskempson/base16-vim')
-
   call packager#add('wikitopian/hardmode')
 
   call packager#add('vim-airline/vim-airline')
