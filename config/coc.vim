@@ -53,6 +53,10 @@
     autocmd CursorHold * silent call CocActionAsync('highlight')
     " Update signature help on jump placeholder.
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+
+    " , being my leader it does not trigger the signature helper properly
+    " https://github.com/neoclide/coc.nvim/issues/1797#issuecomment-616940358
+    autocmd InsertCharPre * if ',' == v:char | call CocActionAsync('showSignatureHelp') | endif
   augroup END
 " }}}
 
