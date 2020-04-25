@@ -57,9 +57,9 @@ if 'space-vim' == s:colorscheme
   colorscheme space_vim_theme
 
   hi Comment cterm=italic gui=italic
-  hi Normal ctermbg=NONE guibg=NONE
-  hi LineNr ctermbg=NONE guibg=NONE
-  hi SignColumn ctermbg=NONE guibg=NONE
+  " hi Normal ctermbg=NONE guibg=NONE
+  " hi LineNr ctermbg=NONE guibg=NONE
+  " hi SignColumn ctermbg=NONE guibg=NONE
 endif
 
 " }}}
@@ -83,6 +83,29 @@ if 'onehalf' == s:colorscheme
   " hi Normal ctermbg=NONE guibg=NONE
   " hi LineNr ctermbg=NONE guibg=NONE
   " hi SignColumn ctermbg=NONE guibg=NONE
+endif
+
+" }}}
+
+" jellybeans {{{
+
+if 'jellybeans' == s:colorscheme
+  if exists('*packager#init')
+    call packager#add('nanotech/jellybeans.vim')
+  endif
+
+  " Class background instead of pure black
+  let g:jellybeans_overrides = {
+    \ 'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+  \}
+  if has('termguicolors') && &termguicolors
+      let g:jellybeans_overrides['background']['guibg'] = 'none'
+  endif
+
+  let g:jellybeans_use_term_italics = 1
+  let g:airline_theme='jellybeans'
+
+  colorscheme jellybeans
 endif
 
 " }}}
