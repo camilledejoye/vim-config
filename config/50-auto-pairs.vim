@@ -12,7 +12,8 @@ let g:AutoPairsShortcutBackInsert = '<C-b>'
 " Fly Mode will always force closed-pair jumping instead of inserting
 " Only for ')', '}', ']'
 " Might be confusing at first but I want to gave it a fair try
-let g:AutoPairsFlyMode = 1
+" It's nice in some circumstances but disturbing most of the time
+" let g:AutoPairsFlyMode = 1
 
 let g:AutoPairsCenterLine = 0 " Prevent `zz` when splitting pairs on multiple lines
 
