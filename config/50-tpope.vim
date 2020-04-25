@@ -15,6 +15,9 @@ if exists('*packager#init')
   call packager#add('tpope/vim-sleuth')
 endif
 
+" Hide fugitive://**// in buffer name and add [git] at then end instead
+let g:airline#extensions#fugitiveline#enabled = 1
+
 let g:projectionist_heuristics = {
     \ 'composer.json&src/&tests/': {
         \ 'src/*.php': {
