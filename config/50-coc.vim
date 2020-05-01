@@ -26,8 +26,11 @@ endif
   " Goto code navigation.
   nmap <silent> <C-M-]> :call CocActionAsync('jumpTypeDefinition', 'edit')<CR>
   nmap <silent> <C-w><C-M-]> :call CocActionAsync('jumpTypeDefinition', 'vsplit')<CR>
-  " nmap <silent> gi <Plug>(coc-implementation)
-  " nmap <silent> gr <Plug>(coc-references)}
+  " Caution: gd will require <space> or to wait for the timeout
+  nmap <silent> gdi <Plug>(coc-implementation)
+  nmap <silent> <C-w>gdi :call CocActionAsync('jumpImplementation', 'vsplit')<CR>
+  nmap <silent> gdr <Plug>(coc-references)
+  nmap <silent> <C-w>gdr :call CocActionAsync('jumpReferences', 'vsplit')<CR>
 
   nmap <silent> gh :call CocActionAsync('doHover')<CR>
 
