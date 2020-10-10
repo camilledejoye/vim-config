@@ -51,10 +51,12 @@ endif
   "   \ ? "\<Plug>(coc-snippets-expand)"
   "   \ : "\<Tab>"
 
+  " Applying codeAction to the current buffer
+  nmap <leader>ca <Plug>(coc-codeaction)
   " Applying codeAction to the selected region.
   " Example: `<leader>aap` for current paragraph
-  xmap <leader>ac <Plug>(coc-codeaction-selected)
-  nmap <leader>ac <Plug>(coc-codeaction-selected)
+  xmap <leader>ca <Plug>(coc-codeaction-selected)
+  " nmap <leader>ca <Plug>(coc-codeaction-selected)
 
   " To manually refresh CoC completion list
   inoremap <expr> <silent> <C-space> coc#refresh()
