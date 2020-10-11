@@ -7,6 +7,7 @@ execute 'set runtimepath+='. $DOTFILES .'/fzf'
 
 " Search Files
 nmap <Leader>sf :GFiles<CR>
+nmap <Leader>sF :Files<CR>
 
 " Search Buffers
 nmap <Leader>sb :Buffers<CR>
