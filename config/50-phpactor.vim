@@ -16,13 +16,14 @@ augroup END
 
 let g:phpactorOmniError = v:true " Enable useful error messages when completion is invoked
 
-" }}}
-
-" phpactor-mapping {{{
-
 " Enable while Experimental
 let g:phpactorInputListStrategy = 'phpactor#input#list#fzf'
 let g:phpactorQuickfixStrategy = 'phpactor#quickfix#fzf'
+
+
+" }}}
+
+" phpactor-mapping {{{
 
 let g:phpactorActivateOverlapingMappings = v:true
 
