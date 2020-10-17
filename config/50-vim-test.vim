@@ -21,4 +21,32 @@ nnoremap <silent> <Leader>tv :TestVisit<CR>
 "     \ endif
 " augroup END " 1}}}
 
+" Strategy auto-detection {{{
+
+function! s:DefineStrategy() " {{{
+  if has('nvim')
+    return 'neovim'
+  elseif exists('*VimuxRunCommand')
+    return 'vimux'
+  elseif 2 == exists(':VtrSendCommandToRunner')
+    return 'vtr'
+  " elseif has('terminal') || exists('*term_start')
+  "   return 'vimterminal'
+  else
+    return 'basic'
+  endif
+endfunction " }}}
+
+" See vimux plugin and strategy when i will use tmux
+let test#strategy = <SID>DefineStrategy()
+
+" Possible if needed
+" let test#strategy = {
+"   \ 'nearest': 'neovim',
+"   \ 'file':    'dispatch',
+"   \ 'suite':   'basic',
+" \}
+
+" }}}
+
 " vim: ts=2 sw=2 et fdm=marker
