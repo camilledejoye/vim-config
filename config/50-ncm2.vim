@@ -11,6 +11,12 @@ if exists('*packager#init')
   call packager#add('phpactor/ncm2-phpactor')
 endif
 
+" Enable NCM2 for all buffers
+augroup ncm2_custom_enable
+  autocmd!
+  autocmd BufEnter * call ncm2#enable_for_buffer()
+augroup END
+
 augroup ncm2_completeopt
   autocmd!
   autocmd User Ncm2PopupOpen  setlocal completeopt=noinsert,menuone,noselect
