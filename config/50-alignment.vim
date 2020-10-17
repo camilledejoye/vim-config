@@ -1,5 +1,8 @@
 if exists('*packager#init')
   call packager#add('junegunn/vim-easy-align')
+  " Add for test, looks easier and I always add a hard time using easy-align
+  " anyway
+  call packager#add('tommcdo/vim-lion')
 endif
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
