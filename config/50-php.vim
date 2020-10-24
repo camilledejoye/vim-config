@@ -10,6 +10,11 @@ if exists('*packager#init')
 
   call packager#add('git@github.com:elythyr/pdv.git', {'branch': 'improvements'})
   call packager#add('tobyS/vmustache')
+
+  " Don't feel the need for it, but I keep the link in case
+  " https://github.com/2072/PHP-Indenting-for-VIm
+  call packager#add('git@github.com:elythyr/php-foldexpr')
+
 endif
 
 " php.vim configurations {{{

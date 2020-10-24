@@ -4,7 +4,7 @@ if exists('*packager#init')
 
   call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
 
-  call packager#add('git@github.com:elythyr/vim-cleanfold.git')
+  call packager#add('git@github.com:elythyr/vim-cleanfold')
 
   call packager#add('kana/vim-niceblock')
   " call packager#add('kana/vim-smartinput')
@@ -27,10 +27,6 @@ if exists('*packager#init')
   " it out when I will have some time
 
   " Language related (syntax, completion, etc.) {{{
-
-  " Don't feel the need for it, but I keep the link in case
-  " https://github.com/2072/PHP-Indenting-for-VIm
-  call packager#add('git@github.com:elythyr/php-foldexpr.vim.git')
 
   call packager#add('lumiliet/vim-twig')
 
