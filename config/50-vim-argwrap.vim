@@ -5,6 +5,7 @@ endif
 nnoremap <silent> gaw :ArgWrap<CR>
 
 let g:argwrap_tail_comma_braces = '['
+let g:argwrap_php_smart_brace = 1
 
 augroup ely_argwrap
   autocmd!
