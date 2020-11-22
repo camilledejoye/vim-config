@@ -2,19 +2,19 @@ if exists('*packager#init')
   call packager#add('FooSoft/vim-argwrap')
 endif
 
-nnoremap <silent> gaw :ArgWrap<CR>
+nmap <silent> gaw <Plug>(ArgWrapToggle)
 
 let g:argwrap_tail_comma_braces = '['
 let g:argwrap_php_smart_brace = 1
+" Until PHP 8 function and method declarations can't have a trailing comma
+" This option removes it so that we can still use argwrap to add it to
+" function and method calls
+let g:argwrap_php_remove_tail_comma_function_declaration = 1
 
 augroup ely_argwrap
   autocmd!
   autocmd FileType vim let b:argwrap_line_prefix = '\ '
-  " PHP 7.4 allows the last parameter of a function call to have a comma at
-  " then end, unfortunately it is not the case for the function declaration.
-  " So it might be painful to have to remove the extra comma when unwrapping a
-  " function declaration but I feel like I do it more often on function calls
-  " anyway.
+  " Since PHP 7.3 function and method calls can have a traling comma
   autocmd FileType php let b:argwrap_tail_comma_braces = g:argwrap_tail_comma_braces .'('
 augroup END
 
