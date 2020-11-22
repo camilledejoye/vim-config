@@ -4,7 +4,7 @@ if exists('*packager#init')
 
   call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
 
-  call packager#add('git@github.com:elythyr/vim-cleanfold')
+  call packager#add('git@github.com:camilledejoye/vim-cleanfold')
 
   call packager#add('kana/vim-niceblock')
   " call packager#add('kana/vim-smartinput')

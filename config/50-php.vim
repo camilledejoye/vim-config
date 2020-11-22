@@ -8,12 +8,12 @@ if exists('*packager#init')
   call packager#add('sniphpets/sniphpets-postfix-codes')
   call packager#add('sniphpets/sniphpets')
 
-  call packager#add('git@github.com:elythyr/pdv.git', {'branch': 'improvements'})
+  call packager#add('git@github.com:camilledejoye/pdv', {'branch': 'improvements'})
   call packager#add('tobyS/vmustache')
 
   " Don't feel the need for it, but I keep the link in case
   " https://github.com/2072/PHP-Indenting-for-VIm
-  call packager#add('git@github.com:elythyr/php-foldexpr')
+  call packager#add('git@github.com:camilledejoye/php-foldexpr')
 
 endif
 

@@ -3,7 +3,7 @@ if exists('*packager#init')
     \ 'branch': 'develop',
     \ 'do': 'composer install -o'
   \ })
-  call packager#add('elythyr/phpactor-mappings')
+  call packager#add('camilledejoye/phpactor-mappings')
 endif
 
 " phpactor {{{
