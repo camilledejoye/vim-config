@@ -1,8 +1,5 @@
 if exists('*packager#init')
-  call packager#add('phpactor/phpactor', {
-    \ 'branch': 'develop',
-    \ 'do': 'composer install -o'
-  \ })
+  call packager#add('phpactor/phpactor', {'do': 'composer install -o'})
   call packager#add('camilledejoye/phpactor-mappings')
 endif
 
