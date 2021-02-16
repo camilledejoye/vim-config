@@ -39,7 +39,7 @@ if exists('*packager#init')
   call packager#add('iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } })
 
   " Handle .rst files
-  call packager#add('gu-fan/riv.vim')
+  " call packager#add('gu-fan/riv.vim')
   " }}}
 endif
 
