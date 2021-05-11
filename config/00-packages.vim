@@ -35,6 +35,9 @@ if exists('*packager#init')
   " Handle .rst files
   " call packager#add('gu-fan/riv.vim')
   " }}}
+
+  " Adds a bunch of text objects, especially argument text object
+  call packager#add('wellle/targets.vim')
 endif
 
 command! PackInstall packadd vim-packager | source $MYVIMRC
