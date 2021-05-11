@@ -7,12 +7,6 @@ if exists('*packager#init')
   call packager#add('git@github.com:camilledejoye/vim-cleanfold')
 
   call packager#add('kana/vim-niceblock')
-  " call packager#add('kana/vim-smartinput')
-  " call packager#add('kana/vim-smartword')
-  call packager#add('kana/vim-textobj-user') " Require for textobj plugins
-  call packager#add('kana/vim-textobj-function')
-  " call packager#add('kana/vim-textobj-syntax')
-  " call packager#add('kana/vim-textobj-indent')
 
   call packager#add('terryma/vim-multiple-cursors')
 
