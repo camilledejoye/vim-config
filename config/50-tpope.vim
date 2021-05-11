@@ -18,6 +18,22 @@ endif
 " Hide fugitive://**// in buffer name and add [git] at then end instead
 let g:airline#extensions#fugitiveline#enabled = 1
 
+" Unimpaired {{{
+" Disable some mappings because I don't use them and they conflict with others
+let g:nremap = {
+  \ '=p': '<skip>',
+  \ '=P': '<skip>',
+  \ '[u': '<skip>',
+  \ '[uu': '<skip>',
+  \ ']u': '<skip>',
+  \ ']uu': '<skip>',
+\ }
+
+" =o and =op mappings could not be removed this way so I had to deal with them
+" in ../after/plugin/conflicting-mappings.vim
+" }}}
+
+" Projectionist heuristics {{{
 let g:projectionist_heuristics = {
     \ 'composer.json&src/&tests/': {
         \ 'src/*.php': {
@@ -198,6 +214,7 @@ let g:projectionist_heuristics = {
         \ },
     \ },
 \ }
+" }}}
 
 nnoremap <silent> <Leader>a :A<CR>
 nnoremap <silent> <Leader>va :AV<CR>
