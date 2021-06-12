@@ -29,6 +29,8 @@ let g:phpactorCustomMappings = [
   \ ['<Leader>pp', '<Plug>phpactorContextMenu', 'n'],
   \ ['<Leader>pn', '<Plug>phpactorNavigate', 'n'],
   \ ['<Leader>pt', '<Plug>phpactorTransform', 'n'],
+  \ ['<Leader>pe', '<Plug>phpactorClassExpand', 'n'],
+  \ ['<Leader>pE', '<Plug>phpactorClassExpand <BAR> :normal! Bi\<CR>', 'n'],
 \ ]
 
 " }}}
